@@ -20,6 +20,7 @@ def parse(ticker):
 		json_loaded_summary =  json.loads(summary_json_response.text)
 		y_Target_Est = json_loaded_summary["quoteSummary"]["result"][0]["financialData"]["targetMeanPrice"]['raw']
 		currentRatio = json_loaded_summary["quoteSummary"]["result"][0]["financialData"]["currentRatio"]['raw']
+		#recommendationKey= json_loaded_summary["quoteSummary"]["result"][0]["financialData"]["recommendationKey"]['raw']
 		currentPrice = json_loaded_summary["quoteSummary"]["result"][0]["financialData"]["currentPrice"]['raw']
 		earnings_list = json_loaded_summary["quoteSummary"]["result"][0]["calendarEvents"]['earnings']
 		eps = json_loaded_summary["quoteSummary"]["result"][0]["defaultKeyStatistics"]["trailingEps"]['raw']
